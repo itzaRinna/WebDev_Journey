@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Rubik, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-weight: 350;
+}
+
+br {
+    display: block;
+    margin: 3.25px 0;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background: url("media-assets/astronaut.jpg") no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 43% ; 
+    
+}
+
+.trigger {
+    display: none;
+}
+
+.trigger:checked ~ .menu {
+    visibility: visible;
+}
+
+.scroll {
+    position: fixed;
+    z-index: 25;
+}
+
+.navbut {
+    position: absolute; 
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 90vw;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;  
+}
+
+.navbut span {
+    width: 60px;
+    height: 9px;
+    margin-top: 9px;
+    border-radius: 9px;
+    display: block;
+    border: solid #a31f50 1px;
+    background-color: rgb(205, 0, 103);
+    position: relative;
+    right: 0;
+    transition: all 0.25s ease-in-out;
+    z-index: 19;
+}
+
+.navbut :nth-child(2n) {
+    left: -16px;
+}
+
+.navbut:hover span:nth-child(2n) {   
+    left: 0px;
+}
+
+.menu {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+    background-color: rgba(200, 200, 200, 0.25);
+    z-index: 16;
+}
+
+.menu:hover {
+    background-color: rgba(0, 0, 0, 3.5);
+    transition-duration: 700ms;
+}
+
+.menuitems li {
+    position: relative; 
+    text-align: center;
+    margin:15vh;
+    list-style: none;
+    justify-content: center;
+    justify-content: space-around;
+    z-index: 16;
+}
+ 
+.menuitems a {
+    color: #edecf3;
+    text-decoration: none;
+    font-size: 6vw;
+    text-transform: uppercase;
+    text-shadow: 0px 5px rgba(260, 260, 260, 0.8);
+    background: transparent;
+    border-radius: 0.05em;
+    height: 10px;
+    z-index: 16;
+}
+
+.menuitems a:hover:after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: .2em;
+    background-color: #b52780;
+    border-radius: .1em;
+}
+
+.heroblock {
+    background-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    height: 24.5vw;
+    width: 24.5vw;
+    border: 1px solid white;
+    left: 60px;
+    top: 60px;
+    z-index: 10;
+}
+
+.herotxt {
+    display: flex;
+    height: 17vw;
+}
+
+.herotxt h1 {
+    position: relative;
+    align-self: flex-end;
+    justify-content: center;
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+    font-size: 7vw;
+    text-align: right;
+    text-transform: uppercase;
+    color: #edecf3;
+}
+
+.story {
+    height: 8vw;
+    display: flex; 
+    justify-content: right;
+    font-size: 1.5vw;
+    color: #edecf3;
+    text-transform: uppercase;
+}
+
+.story p {
+    left: 50px;
+    padding: 10px 5px;
+    align-self: flex-end;
+}
+
+.story a {
+    position: relative;
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    align-self: flex-end;
+    text-decoration: none;
+    color: black;
+    left:0;
+    transition: all 0.2s ease-in-out; 
+}
+
+    .story a:hover {
+    left: 10px;
+}
+
+/* CONTENT PAGE  */
+
+.content {
+    background-image: url("media-assets/stars_90deg.jpg") ;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: 0 -10vw;
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 1;
+
+}
+
+.content_filter {
+    position: absolute;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.space {
+    color: rgb(255, 255, 255);
+    text-shadow: 0.2vw 0.2vw 0.2vw #141414;
+    position: relative;
+    font-size: 6.1vw;
+    z-index: 11;
+
+}
+
+.ventures {
+    position: relative;
+    right: -5vw;
+    font-size: 8vw;
+    font-family: 'Times New Roman', Times, serif;
+    opacity: 70%;
+    z-index: 10;
+}
+
+main article {
+    padding: 5vh 5vw;
+    z-index: 10;
+}
+
+main h3 {
+    padding: 2vh 0vw;
+}
+
+.heading {
+    font-size:2.2vw ;
+}
+
+article p {
+    font-size: 1.3vw;
+    padding-top: 0.5vw;
+}
+
+.quote {
+    display: block;
+    font-size: 1.3vw;
+    padding-left: 1.5vw;
+    padding-top: 10px;
+}
+
+blockquote {
+    font-size: 2.5vw;
+    padding: 1vw 4vw;
+    font-style: italic;
+    background: -webkit-radial-gradient(rgba(238, 238, 238, 0.707), rgba(205, 0, 103, 0.4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.tom {
+    position: relative;
+    height: 41vh;
+    width: 24vh;
+    float: right;
+    top:-2vw;
+    rotate: 7deg;
+    right: 1vw;
+}
+
+.tom_link {
+    display: flex;
+    align-items: center;
+}
+.tom_link a {
+    color: rgb(205, 0, 103);
+    font-size: 1.3vw;
+    position: relative;
+    padding-left: 5px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    align-self: flex-end;
+    text-decoration: none;
+    left:0;
+    transition: all 0.25s ease-in-out
+}
+
+.tom_link a:hover {
+    left: 20px;
+}
+
+
+#cookie_banner {
+    position: fixed;
+    top:89vh;
+    height: 5vw;
+    width: 100%;
+    background-color: rgb(2,6,31);
+    color: rgb(205, 0, 103);
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 20;
+}
+
+.cookie_close {
+    justify-self: center;
+    background-color: rgb(8,17,96);
+    color: white;
+    border: none;
+    padding: 0.5vw 0.5vw;
+    cursor: pointer;
+}
+
+.cookie_txt {
+    font-size: 1.5vw;
+}
